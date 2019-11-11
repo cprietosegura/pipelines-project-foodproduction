@@ -7,7 +7,7 @@ def SelectCols(df):
     return df
 
 def CorrectNameCols(df):
-    df['Country'][28]='Slovakia'
+    df.at[28,'Country']='Slovakia'
     return df
 
 def ReplaceUnknownVal(df):
@@ -32,5 +32,5 @@ def TransformDf(df):
     return df
 
 def ExportCleanDfEmissions(df):
-    return df.to_csv(r'./output/Pollution-emissions.csv')
+    return df.to_csv('../output/Pollution-emissions.csv')
 

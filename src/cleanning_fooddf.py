@@ -17,8 +17,8 @@ def CleanColNames(df):
     return df
 
 def CountryNames(df):
-    df['Area'][41]='Republic of Cyprus'
-    df['Area'][42]='Czech Republic'
+    df.at[41,'Area']='Republic of Cyprus'
+    df.at[42,'Area']='Czech Republic'
     return df
 
 def FilterUeCountries(df):
@@ -48,4 +48,4 @@ def RecolocateDf(df):
 
 
 def ExportCleanDfFood(df):
-    return df.to_csv(r'./output/Food-production.csv')
+    return df.to_csv('../output/Food-production.csv')

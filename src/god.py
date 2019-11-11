@@ -20,6 +20,7 @@ def CleaningFoodDf(df):
     df=cleanning_fooddf.GroupSumCountries(df)
     df=cleanning_fooddf.RenameColArea(df)
     df=cleanning_fooddf.RecolocateDf(df)
+    cleanning_fooddf.ExportCleanDfFood(df)
     
     return df
 

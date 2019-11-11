@@ -13,7 +13,9 @@ def Maximum(df_food,df_poll,country):
 
 def CompareEvolutionGraffics(df_food,df_poll,country):
     grafica_1=df_food.plot(x='Year', y=[country])
+    plt.title("Evolution of food production in 1000 tonnes")
     grafica_2=df_poll.plot(x='Year', y=[country])
+    plt.title("Evolution of gas emissions in tonnes of CO2")
     print('Check your output to analyse the graffics and study the correlation of these levels throughout the last years.')
     return grafica_1,grafica_2
 
@@ -21,11 +23,10 @@ def SaveGraffics(grafica_1, grafica_2): # TENGO DOS GRAFICAS
     fig1 = grafica_1.get_figure()
     fig1.savefig('../output/graf_food.png')
     #plt.ylabel("Production in 1000 tones")
-    plt.title("Evolution of food production in 1000 tonnes")
     #plt.savefig('../output/graf_food.png', dpi= 100)
     fig2 = grafica_2.get_figure()
     fig2.savefig('../output/graf_poll.png')
-    plt.title("Evolution of gas emissions in tonnes of CO2")
+    #plt.title("Evolution of gas emissions in tonnes of CO2")
     #plt.savefig('../output/graf_poll.png', dpi= 100)
     
     

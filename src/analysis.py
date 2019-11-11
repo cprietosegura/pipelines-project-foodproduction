@@ -9,7 +9,7 @@ def OpenData(file):
 def Maximum(df_food,df_poll,country):
     max_year_food = df_food.loc[df_food[country].idxmax()]
     max_year_poll = df_poll.loc[df_poll[country].idxmax()]
-    return '\n The year with more food production in {} was {} and with more gas emissions was {}.'.format(country,int(max_year_food[0]), int(max_year_poll[1]))
+    return '\n The year with the highest food production level in {} was {} and with more gas emissions was {}.'.format(country,int(max_year_food[0]), int(max_year_poll[1]))
 
 def CompareEvolutionGraffics(df_food,df_poll,country):
     grafica_1=df_food.plot(x='Year', y=[country])

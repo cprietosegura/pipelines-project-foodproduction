@@ -2,13 +2,16 @@ import god
 import argparse
 
 def recibeConfig():
-    my_parser = argparse.ArgumentParser(description='Obtain information about food production and gas emissions in the EU.')
+    my_parser = argparse.ArgumentParser(description="""This program provides you with information 
+    about food production and its relation with Greenhouse gas emissions within the European Union. 
+    The data has been extracted from the Organisation for Economic Co-operation and Development and kaggle.com. 
+    Choose an UE country to obtain information.""")
     my_parser.add_argument('--country',
                            type=str,
-                           help='Enter a country of the European Union',
+                           help='Enter a country of the EU',
                            default="Spain")
     args = my_parser.parse_args()
-    print(args)
+    #print(args)
     return args
 
 def CheckCountryData(country):

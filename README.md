@@ -12,13 +12,24 @@ The main file gives a choice to the user of selecting a country in the EU and re
 ---- 
 
 The project has different folders an files:
+
 • Input: containing the original database.
+
 • Src: container of the scripts with the pipelines for all the processes.
-    - cleanning_fooddf.py
-    - scrapping.py
-    - cleanning_pollutiondf.py
-    - analysis.py
-    - god.py: concentrates all the previous steps in a mayor pipeline.
-    - main.py: defines the argparse and executes the program importing god.py.
+
+    cleanning_fooddf.py
+
+    scrapping.py
+
+    cleanning_pollutiondf.py
+
+    analysis.py
+
+    god.py: concentrates all the previous steps in a mayor pipeline.
+
+    main.py: defines the argparse and executes the program importing god.py.
+
+
 • Output: keeps the final datasets and graphics.
+
 • Tests: includes the test in Jupyter Notebook.
